@@ -2,7 +2,7 @@
 #SBATCH -J Indexing
 #SBATCH -p general
 #SBATCH -q general
-#SBATCH -c 4
+#SBATCH -c 1
 #SBATCH --mem=10G
 #SBATCH -o ./index-%j.out
 
@@ -30,7 +30,6 @@ RefFile=./Wuhan-Hu-1_NC_045512.2.fasta
 ###############################
 
 module load minimap2/2.17
-#minimap2 indexing
 minimap2 -d ./minimap2/Wuhan-Hu-1_NC_045512.2.mmi ${RefFile}
 module rm minimap2/2.17
 
@@ -39,8 +38,6 @@ module rm minimap2/2.17
 ###############################
 
 module load bwa-mem2/2.1
-
-#bwamem2 indexing
 bwa-mem2 index -p ./bwamem2/Wuhan-Hu-1_NC_045512.2 ${RefFile}
 module rm bwa-mem2/2.1
 
@@ -49,7 +46,6 @@ module rm bwa-mem2/2.1
 ###############################
 
 module load samtools/1.10
-
 samtools faidx ${RefFile}
 
 
