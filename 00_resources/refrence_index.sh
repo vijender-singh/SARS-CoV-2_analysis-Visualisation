@@ -10,7 +10,7 @@
 hostname # Compute-node information is collecated on which the script will be executed.
 date
 
-mkdir bwamem2 minimap2 annotation
+mkdir bwamem2 minimap2 annotation 
 
 ###############################
 # Annotation Download
@@ -47,6 +47,7 @@ module rm bwa-mem2/2.1
 
 module load samtools/1.10
 samtools faidx ${RefFile}
+
 
 
 date
