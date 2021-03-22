@@ -1,12 +1,15 @@
+#!/bin/bash
 
-OutDir="Path/to/outputDIr"
-ProjectDir="Path/to/ProjectDir"
-SampleName="SampleName"
-SampleDir=${ProjectDir}/${SampleName}
-SampleSource="SampleSourceType WW/SI"
-ReadType="PE/SE/PEtaSE"
-ProjectID="PID"
-ReRunID="18Mar2021"
+source config_file.txt
+
+SampleName=${1}
+SampleSource=${2}
+ProjectDir=${3}
+OutDir=${4}
+ProjectID=${5}
+
+SampleDir=${ProjectDir}/${SampleName}t
+
 
 queue=general
 QOS=general
@@ -51,13 +54,52 @@ jid1=`sbatch <<- MERGE | egrep -o -e "\b[0-9]+$"
         date
         cd ${SampleDir}
 
+        module load ea-utils/1.04.807
+
         R1files=`ls *R1*.fastq.gz 2>/dev/null | wc -l`
         R2files=`ls *R2*.fastq.gz 2>/dev/null | wc -l`
 
 
+        if [ ${R1files} != ${R2files} ]
+        then
+        	echo -e "The number of input R1 and R2 files for the sample are not same. "
+        	echo -e "Please check the input files"
+        	echo -e "Aborting at MERGE step"
+        	exit 1
+        elif [ ${R1files} -eq 1 ] && [ ${R2files} -eq 1 ]
+        then
+        	echo -e "There is 1 input file each for R1 and R2"
+        	echo -e "Reads will be joined based on minimum overlap of 6bps"
+        	#echo -e "${SampleName}_R1.fastq"
+        	#echo -e "${SampleName}_R2.fastq"
+        	gunzip *.fastq.gz
+
+        	fastq-join *R1*.fastq *R2*.fastq -o ${SampleName}.%.fastq
+
+        	cat ${SampleName}.*.fastq >> ${SampleName}.fastq
+
+        else
         	echo -e "There is ${R1files} input file for R1 and ${R2files} for R2"
-        	echo -e "Files will be merged to a single file"
-        	zcat `ls *.fastq.gz ` >> ${SampleName}_PEtaSE.fastq
+        	echo -e "R1 and R2 group of files will be merged and will be renamed as"
+        	echo -e "${SampleName}_R1.fastq"
+        	echo -e "${SampleName}_R2.fastq"
+        	echo -e "Reads from the R1 and R2 files will be stitched based on minimum overlap of 6bps"
+        	zcat `ls *R1*.fastq.gz | sort -` >> ${SampleName}_R1.fastq
+        	zcat `ls *R2*.fastq.gz | sort -` >> ${SampleName}_R2.fastq
+
+        	fastq-join ${SampleName}_R1.fastq ${SampleName}_R2.fastq -o ${SampleName}.%.fastq
+
+        	cat ${SampleName}.*.fastq >> ${SampleName}_PEtaSE.fastq
+        fi
+
+        	readsinital=`wc -l ${SampleName}_R1.fastq`
+        	readsmerged=`wc -l ${SampleName}.join.fastq`
+        	prcnt=$(( 100*${readsmerged}/${readsinital} ))
+
+        	echo -e "       \t Total Reads \t reads_joined "
+        	echo -e " ========================================================"
+        	echo -e "counts \t ${readsinital} \t ${readsmerged}"
+        	echo -e "percent\t                \t ${prcnt}%"
 
 
         echo "$0 $@"

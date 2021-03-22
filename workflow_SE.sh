@@ -1,14 +1,14 @@
+#!/bin/bash
 
-OutDir="Path/to/outputDIr"
-ProjectDir="Path/to/ProjectDir"
-SampleName="SampleName"
+source config_file.txt
+
+SampleName=${1}
+SampleSource=${2}
+ProjectDir=${3}
+OutDir=${4}
+ProjectID=${5}
+
 SampleDir=${ProjectDir}/${SampleName}
-SampleSource="SampleSourceType WW/SI"
-ReadType="PE/SE/PEtaSE"
-ProjectID="PID"
-ReRunID="18Mar2021"
-
-
 
 queue=general
 QOS=general

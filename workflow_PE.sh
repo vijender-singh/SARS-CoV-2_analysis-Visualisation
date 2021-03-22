@@ -1,17 +1,16 @@
+#!/bin/bash
 
-OutDir="Path/to/outputDIr"
-ProjectDir="Path/to/ProjectDir"
-SampleName="SampleName"
+source config_file.txt
 
-SampleSource="SampleSourceType WW/SI"
-ReadType="PE/SE/PEtaSE"
-ProjectID="PID"
-ReRunID="18Mar2021"
+SampleName=${1}
+SampleSource=${2}
+ProjectDir=${3}
+OutDir=${4}
+ProjectID=${5}
+
+SampleDir=${ProjectDir}/${SampleName}
 
 resourceDir="path/to/00_resources"
-
-
-
 queue=general
 QOS=general
 date
@@ -19,7 +18,7 @@ date
 logTimeStamp=`date +%d"_"%b"_"%H"hr-"%M"min-"%S"sec"`
 datestamp=`date +%d%b%Y`
 
-SampleDir=${ProjectDir}/data/${SampleName}
+SampleDir=${ProjectDir}/${SampleName}
 ProjectLogDir=${OutDir}/log-${ProjectID}
 RawfastqcDir=${OutDir}/rawfastqcDir-${datestamp}
 TrimfastqcDir=${OutDir}/trimfastqcDir-${datestamp}

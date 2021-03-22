@@ -1,0 +1,55 @@
+# Please configure the file by setting variables
+
+######################################################################################
+# ProjectDir :  This is the directory in which 
+# 				there should be sample directories containing fastq files.
+######################################################################################
+
+ProjectDir="Path/to/ProjectDir"
+
+######################################################################################
+# SampleNames=(Sample1 Sample2 Sample3 ... sampleN)
+# 		Samplenames shoule match the names of the directories in which their 
+#		respective fastq files are located.
+######################################################################################
+SampleNames=()
+
+######################################################################################
+# SampleSources=(WW SI SI ... WW)
+# 		WW : WasteWater
+# 		SI : SampleIsolate
+# 		For each sample its sample source has to be provided
+######################################################################################
+SampleSources=()
+
+######################################################################################
+#AnalysisType=PE
+# 		PE 	 : Paired End read data analysis
+# 		SE 	 : Single end read data analysis
+# 		PEtaSE : PairedEnd treat as SingleEnd, R1 and R2 reads with overlap will be STITCHED 
+# 		   together and unstiched reads will be treated as single end read data
+#
+# MultiTypeAnalysis=(PE PE SE ... PEtaSE)
+## 		Use this if each sample can be processed/analysed differently. Provide 1 value for
+#  		each sample from PE SE and PEtaSE. Leave it blank same analysis is carried out across all samples.
+######################################################################################
+AnalysisType=PE
+MultiTypeAnalysis=
+
+
+######################################################################################
+# 		Output directory
+######################################################################################
+OutDir="path/to/outputDir"
+
+######################################################################################
+#		Provide an ID to uniquely identify the project, no spaces.
+######################################################################################
+ProjectID="ProjectJan2021"
+
+
+#####################################################################################
+#
+
+
+
