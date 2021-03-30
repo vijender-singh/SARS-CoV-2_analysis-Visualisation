@@ -92,7 +92,7 @@ Kendra_ISG_TEST
     └── log-30_Mar_13hr-58min-37sec_PEtaSE
  ```
  
- ### Lets Look a bit closely
+ ### Lets Look closely at the directory structure.
  
  ```
  Kendra_ISG_TEST
