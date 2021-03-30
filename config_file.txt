@@ -1,18 +1,18 @@
 # Please configure the file by setting variables
 
 ######################################################################################
-# ProjectDir :  This is the directory in which 
+# DataDir :  This is the directory in which 
 # 				there should be sample directories containing fastq files.
 ######################################################################################
 
-ProjectDir="Path/to/ProjectDir"
+DataDir="/labs/CBC/core_projects/2021/Kendra_isg/01_raw_data"
 
 ######################################################################################
 # SampleNames=(Sample1 Sample2 Sample3 ... sampleN)
 # 		Samplenames shoule match the names of the directories in which their 
 #		respective fastq files are located.
 ######################################################################################
-SampleNames=()
+SampleNames=(20200106WWTP 20210208GRAD  COVID_ATCC_pos  COVID_neg1  COVID_neg2  NCAA0203mu  NCAA0203os)
 
 ######################################################################################
 # SampleSources=(WW SI SI ... WW)
@@ -20,7 +20,7 @@ SampleNames=()
 # 		SI : SampleIsolate
 # 		For each sample its sample source has to be provided
 ######################################################################################
-SampleSources=()
+SampleSources=(WW SI SI SI SI SI SI)
 
 ######################################################################################
 #AnalysisType=PE
@@ -33,23 +33,23 @@ SampleSources=()
 ## 		Use this if each sample can be processed/analysed differently. Provide 1 value for
 #  		each sample from PE SE and PEtaSE. Leave it blank same analysis is carried out across all samples.
 ######################################################################################
-AnalysisType=PE
+AnalysisType=SE
 MultiTypeAnalysis=
 
 
 ######################################################################################
 # 		Output directory
 ######################################################################################
-OutDir="path/to/outputDir"
+OutDir="/labs/CBC/core_projects/2021/Kendra_ISG_TEST"
 
 ######################################################################################
 #		Provide an ID to uniquely identify the project, no spaces.
 ######################################################################################
-ProjectID="ProjectJan2021"
+ProjectID="Kendra_ISG"
 
 
 #####################################################################################
-#
+ResourceDir=/labs/CBC/core_projects/2021/SARS-CoV-2_analysis-Visualisation/00_resources 		
 
 
 

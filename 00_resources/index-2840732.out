@@ -1,0 +1,39 @@
+xanadu-39
+Tue Mar 23 13:07:31 EDT 2021
+--2021-03-23 13:07:31--  https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/858/895/GCF_009858895.2_ASM985889v3/GCF_009858895.2_ASM985889v3_genomic.gff.gz
+Resolving ftp.ncbi.nlm.nih.gov (ftp.ncbi.nlm.nih.gov)... 165.112.9.229, 165.112.9.228, 2607:f220:41e:250::12, ...
+Connecting to ftp.ncbi.nlm.nih.gov (ftp.ncbi.nlm.nih.gov)|165.112.9.229|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2914 (2.8K) [application/x-gzip]
+Saving to: ‘GCF_009858895.2_ASM985889v3_genomic.gff.gz’
+
+     0K ..                                                    100% 93.4M=0s
+
+2021-03-23 13:07:32 (93.4 MB/s) - ‘GCF_009858895.2_ASM985889v3_genomic.gff.gz’ saved [2914/2914]
+
+[M::mm_idx_gen::0.010*0.40] collected minimizers
+[M::mm_idx_gen::0.013*0.52] sorted minimizers
+[M::main::0.014*0.58] loaded/built the index for 1 target sequence(s)
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 1
+[M::mm_idx_stat::0.015*0.59] distinct minimizers: 5587 (99.93% are singletons); average occurrences: 1.004; average spacing: 5.332
+[M::main] Version: 2.17-r941
+[M::main] CMD: minimap2 -d ./minimap2/Wuhan-Hu-1_NC_045512.2.mmi ./Wuhan-Hu-1_NC_045512.2.fasta
+[M::main] Real time: 0.020 sec; CPU: 0.010 sec; Peak RSS: 0.003 GB
+Looking to launch executable "/isg/shared/apps/bwa-mem2/2.1/bwa-mem2.avx2", simd = .avx2
+Launching executable "/isg/shared/apps/bwa-mem2/2.1/bwa-mem2.avx2"
+[bwa_index] Pack FASTA... 0.00 sec
+* Entering FMI_search
+init ticks = 14522290
+ref seq len = 59806
+binary seq ticks = 2647612
+build suffix-array ticks = 19313580
+ref_seq_len = 59806
+count = 0, 18548, 29903, 41258, 59806
+BWT[17048] = 4
+CP_SHIFT = 6, CP_MASK = 63
+sizeof CP_OCC = 64
+pos: 7476, ref_seq_len__: 7475
+max_occ_ind = 934
+build fm-index ticks = 22852740
+Total time taken: 0.0463
+Tue Mar 23 13:07:33 EDT 2021
