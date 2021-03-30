@@ -34,9 +34,11 @@ DataDir/
 * : Represent any strings present in fastq file names e.g. S1_L001 etc.  Keep the files compressed.
 ```
 
+
 **`SampleNames=(Sample1 Sample2 Sample3 ... SampleN)`
 
 Make sure the **`SampleNames`** matches the name of the directories containing the sample data as showed under `DataDir`
+
 
 **`SampleSources=(WW SI SI ... WW)`**
 
@@ -45,17 +47,21 @@ Please indicate a Sample source for each sample.  The options are
 **`WW`** : Waste Water Treatment
 **`SI`** : Sample Isolate/ clinical isolate
 
+
 **`AnalysisType=PEtaSE`**
 
 This parameter will indicate what kind of analysis has to be done.  The options are **`PE`**, **`SE`** and **`PEtaSE`**,  Each option is described above. 
+
 
 **`MultiTypeAnalysis=`**
 
 Use `MultiTypeAnalysis` option only if each sample has to be processed in a different mode otherwise leave it blank. The syntax to specify it is **`MultiTypeAnalysis=(PE SE PE ... PEtaSE)`**.
 
+
 **`OutDir="/Path/to/output/Dir"`**
 
 If **`OutDir`** directory will be created if that doesnot exist.
+
 
 **`ProjectID="SKA12Jun2021"`**
 
