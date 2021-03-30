@@ -40,12 +40,12 @@ DataDir/
 
 2. #### **`SampleNames=(Sample1 Sample2 Sample3 ... SampleN)`
 
-Make sure the **`SampleNames`** matches the name of the directories containing the sample data as showed under `DataDir`
+> Make sure the **`SampleNames`** matches the name of the directories containing the sample data as showed under `DataDir`
 
 
 3. #### **`SampleSources=(WW SI SI ... WW)`**
 
-Please indicate a Sample source for each sample.  The options are
+> Please indicate a Sample source for each sample.  The options are
 
 **`WW`** : Waste Water Treatment
 **`SI`** : Sample Isolate/ clinical isolate
@@ -53,27 +53,28 @@ Please indicate a Sample source for each sample.  The options are
 
 4. #### **`AnalysisType=PEtaSE`**
 
-This parameter will indicate what kind of analysis has to be done.  The options are **`PE`**, **`SE`** and **`PEtaSE`**,  Each option is described above. 
+> This parameter will indicate what kind of analysis has to be done.  The options are **`PE`**, **`SE`** and **`PEtaSE`**,  Each option is described above. 
 
 
 5. #### **`MultiTypeAnalysis=`**
 
-Use `MultiTypeAnalysis` option only if each sample has to be processed in a different mode otherwise leave it blank. The syntax to specify it is **`MultiTypeAnalysis=(PE SE PE ... PEtaSE)`**.
+> Use `MultiTypeAnalysis` option only if each sample has to be processed in a different mode otherwise leave it blank. The syntax to specify it is 
+> **`MultiTypeAnalysis=(PE SE PE ... PEtaSE)`**.
 
 
 6. #### **`OutDir="/Path/to/output/Dir"`**
 
-**`OutDir`** directory will be created if that doesnot exist.
+> **`OutDir`** directory will be created if that doesnot exist.
 
 
 7. #### **`ProjectID="SKA12Jun2021"`**
 
-Give an ID to the project. 
+> Give an ID to the project. 
 
 
 8. #### **`ResourceDir=/path/to/resourrce/directory/00_resources`**
 
-Provide path to the resource directory (00_resources) included here.
+> Provide path to the resource directory (00_resources) included here.
 
 
 
