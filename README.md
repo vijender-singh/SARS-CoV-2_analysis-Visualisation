@@ -102,8 +102,8 @@ Kendra_ISG_TEST
         (a) rawfastqcDir-dateofAnalysis : FastQC report of the raw files
         (b) trimDir-dateofAnalysis      : Trimmomatic trimming of the reads
         (c) trimfastqcDir-dateofAnalysis: FastQc of trimmed reads
-        (d) VarDir-dateofAnalysis       : This directory contains, read depth information, bedgraph file of coverage, VCf files with variants and annotation of VCF                                           file using the GFF file.  The annotation will have the information on gene the SNP is located in and also amino acid                                                 changes due to the SNP and more.
- (2): log-TimeStampOfAnalysis_AnalysisType:  ( here: log-30_Mar_13hr-58min-37sec_PEtaSE).  This contain all the log info of each run.  Each run will create a new                                              log folder based on time stamp.
+        (d) VarDir-dateofAnalysis       : This directory contains, read depth information, bedgraph file of coverage, VCf files with variants and annotation of VCF file using the GFF file.  The annotation will have the information on gene the SNP is located in and also amino acid changes due to the SNP and more.
+ (2): log-TimeStampOfAnalysis_AnalysisType:  ( here: log-30_Mar_13hr-58min-37sec_PEtaSE).  This contain all the log info of each run.  Each run will create a seperate log folder based on time stamp.
         
  
  ```
