@@ -78,5 +78,36 @@ DataDir/
 
 ## OUTPUT
 
-The output will generate the following directory structure.
+The output will generate the following directory structure. The output is an example of running data with `example_config_file.txt`.  The data is analysed in `PEtaSE` mode.
+
+```
+Kendra_ISG_TEST             
+├── Kendra_ISG_PEtaSE       
+│   ├── MapDir-30Mar2021
+│   ├── rawfastqcDir-30Mar2021
+│   ├── trimDir-30Mar2021
+│   ├── trimfastqcDir-30Mar2021
+│   └── VarDir-30Mar2021
+└── log-Kendra_ISG
+    └── log-30_Mar_13hr-58min-37sec_PEtaSE
+ ```
+ 
+ ### Lets Look a bit closely
+ 
+ ```
+ Kendra_ISG_TEST
+ 
+ This was the OutDir of the config_file.txt.  This Directory will contain 2 directories names based on the ProjectID (here: Kendra_ISG).
+ (1): ProjectID_AnalysisType (Here : Kendra_ISG_PEtaSE).  This directory contain output from each individual steps in a seperate directory.
+        (a) rawfastqcDir-dateofAnalysis : FastQC report of the raw files
+        (b) trimDir-dateofAnalysis      : Trimmomatic trimming of the reads
+        (c) trimfastqcDir-dateofAnalysis: FastQc of trimmed reads
+        (d) VarDir-dateofAnalysis       : This directory contains, read depth information, bedgraph file of coverage, VCf files with variants and annotation of VCF                                           file using the GFF file.  The annotation will have the information on gene the SNP is located in and also amino acid                                                 changes due to the SNP and more.
+ (2): log-TimeStampOfAnalysis_AnalysisType:  ( here: log-30_Mar_13hr-58min-37sec_PEtaSE).  This contain all the log info of each run.  Each run will create a new                                              log folder based on time stamp.
+        
+ 
+ ```
+ 
+ 
+ 
 
