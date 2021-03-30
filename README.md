@@ -10,7 +10,7 @@ The workflow runs in 3 modes `PE`,`SE` and `PEtaSE`.
 
 In order to run the workflow please maked adequate changes in the **`config_file.txt`** file.
 
-#### **`DataDir="/path/to/data/directory"`**
+### **`DataDir="/path/to/data/directory"`**
 
 *The data directory should have following heirarchy *
 ```
