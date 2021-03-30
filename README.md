@@ -62,9 +62,10 @@ If **`OutDir`** directory will be created if that doesnot exist.
 Give an ID to the project. 
 
 
-**`ResourceDir=/path/to/resourrce/directory`**
+**`ResourceDir=/path/to/resourrce/directory/00_resources`**
 
-Provide path to the resource directory
+Provide path to the resource directory (00_resources) included here.
+
 
 
 
