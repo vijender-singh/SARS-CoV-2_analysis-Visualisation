@@ -1,6 +1,12 @@
 #!/bin/bash
 
-source ./config_file.txt
+configFilePath=${1}
+
+if [ -z ${configFilePath} ];then
+	source ./config_file.txt
+else
+	source ${configFilePath}/config_file.txt
+fi
 
 # Variable check
 
