@@ -76,5 +76,7 @@ DataDir/
 
 
 
+## OUTPUT
 
+The output will generate the following directory structure.
 
