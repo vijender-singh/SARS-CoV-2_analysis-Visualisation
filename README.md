@@ -2,6 +2,7 @@
 
 ## Workflow Execution
 > Copy the `config_file.txt` and make appropriate changes to it according to instructions described bellow in INPUT section. For each seperate analysis a new copy of the file can be made and be named as per users need.  Also the resource directory can be updated based on the instruction given in the `README.md` file in `00_resources` directory.  The file to the resource directory can then be added to the config file.  Once the config file and resource directory are updated as required. Run the analysis as
+> 
 **`sh run.sh path/to/config/file/config_file.txt`**
 
 ## INPUT
