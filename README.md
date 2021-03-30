@@ -34,7 +34,7 @@ DataDir/
     └── SampleN*_R2.fastq.gz
 
 * : Represent any strings present in fastq file names e.g. S1_L001 etc.  Keep the files compressed.
-```
+
 
 
 #### **`SampleNames=(Sample1 Sample2 Sample3 ... SampleN)`
@@ -62,7 +62,7 @@ Use `MultiTypeAnalysis` option only if each sample has to be processed in a diff
 
 #### **`OutDir="/Path/to/output/Dir"`**
 
-If **`OutDir`** directory will be created if that doesnot exist.
+**`OutDir`** directory will be created if that doesnot exist.
 
 
 #### **`ProjectID="SKA12Jun2021"`**
@@ -74,7 +74,7 @@ Give an ID to the project.
 
 Provide path to the resource directory (00_resources) included here.
 
-
+```
 
 
 
