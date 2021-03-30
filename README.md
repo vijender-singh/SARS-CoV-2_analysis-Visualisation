@@ -38,7 +38,7 @@ DataDir/
 
 ```
 
-2. #### **`SampleNames=(Sample1 Sample2 Sample3 ... SampleN)`**
+2. #### **`SampleNames=(Sample1 Sample2 Sample3 ... SampleN)`**.
 
 ... Make sure the **`SampleNames`** matches the name of the directories containing the sample data as showed under `DataDir`
 
