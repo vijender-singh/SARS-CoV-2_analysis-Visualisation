@@ -8,4 +8,8 @@ The workflow runs in 3 modes `PE`,`SE` and `PEtaSE`.
 
 **PEtaSE**: (**P**aired **E**nd **t**reated **a**s **S**ingle **E**nd ) This format would be ideal if the **`R1`** and **`R2`** reads of **`PE`** data overlap with each other.  In this format the reads will be merged (with minimum 6bps of overlap) to create a single contigous read.  This read will be treated as a **`SE`** data. The reads which failed to have an overlap (due to trimming) will be treated as single end reads.
 
-In order to run the workflow please maked adeaquate changes in the **`config_file.txt`** file.
+In order to run the workflow please maked adequate changes in the **`config_file.txt`** file.
+
+**`DataDir="/path/to/sample/data/directory"`**
+~The ~
+
