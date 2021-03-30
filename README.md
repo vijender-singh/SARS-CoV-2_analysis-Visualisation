@@ -10,6 +10,27 @@ The workflow runs in 3 modes `PE`,`SE` and `PEtaSE`.
 
 In order to run the workflow please maked adequate changes in the **`config_file.txt`** file.
 
-**`DataDir="/path/to/sample/data/directory"`**
-~The ~
+**`DataDir="/path/to/data/directory"`**
+
+*The data directory should have following heirarchy *
+```
+DataDir/
+├── Sample1
+│   ├── Sample1*_R1.fastq.gz
+│   └── Sample1*_R2.fastq.gz
+├── Sample2
+│   ├── Sample2*_R1.fastq.gz
+│   └── Sample2*_R2.fastq.gz
+├── Sample3
+│   ├── Sample3*_R1.fastq.gz
+│   └── Sample3*_R2.fastq.gz
+.
+.
+.
+└── SampleN
+    ├── SampleN*_R1.fastq.gz
+    └── SampleN*_R2.fastq.gz
+
+* : Represent any strings present is sample names e.g. S1_L001 etc.
+```
 
