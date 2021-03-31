@@ -7,7 +7,7 @@
 
 ## INPUT
 
-The workflow runs in 3 modes `PE`,`SE` and `PEtaSE`.
+The workflow runs in one of the 3 modes `PE`,`SE` and `PEtaSE` specified by the user.
 
 > **PE**: In **`PE`** mode the input data is paired end sequecing with **`R1`** and **`R2`** files in **`.fastq.gz`** format. 
 
