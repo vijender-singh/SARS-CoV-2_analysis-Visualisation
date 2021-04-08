@@ -33,7 +33,7 @@ SampleSources=(WW SI SI SI SI SI SI)
 ## 		Use this if each sample can be processed/analysed differently. Provide 1 value for
 #  		each sample from PE SE and PEtaSE. Leave it blank same analysis is carried out across all samples.
 ######################################################################################
-AnalysisType=SE
+AnalysisType=PEtaSE
 MultiTypeAnalysis=
 
 

@@ -308,6 +308,16 @@ module load snpEff/4.3q
 java -Xmx20g -jar /isg/shared/apps/snpEff/4.3q/snpEff.jar Wuhan-Hu-1_NC_045512.2 ${SampleName}_PEtaSE.vcf > ${SampleName}_PEtaSE_Anno.vcf
 echo "$0 $@"
 
+module load samtools
+samtools depth -d 0 -Q 0 -q 0 -aa ${MapDir}/minimap_${SampleName}_PEtaSE.bam > ${SampleName}___PEtaSE_Depth.txt
+
+
+
+module purge
+module load vcflib/1.0.0-rc1
+
+vcf2fasta -f ${resourceDir}/Wuhan-Hu-1_NC_045512.2.fasta -p ConsensusSeq_${SampleName}_PEtaSE -P 1 ${SampleName}_PEtaSE.vcf
+
 rm -r ${SampleDir}/PEtaSE
 
 VARCALL`
