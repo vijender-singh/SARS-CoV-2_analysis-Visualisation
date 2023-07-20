@@ -110,10 +110,9 @@ Kendra_ISG_TEST
         (d) VarDir-dateofAnalysis       : This directory contains, read depth information, bedgraph file of coverage, VCf files with variants and annotation of VCF file using the GFF file.  The annotation will have the information on gene the SNP is located in and also amino acid changes due to the SNP and more.
  (2): log-TimeStampOfAnalysis_AnalysisType:  ( here: log-30_Mar_13hr-58min-37sec_PEtaSE).  This contain all the log info of each run.  Each run will create a seperate log folder based on time stamp.
         
- ### Data Visualisation
-Use the remote desktop app and connect to R-shiny app server on the VM 'sarcov2.cam.uchc.edu' (use CAM credentials to login) and add the `VarDir-dateofAnalysis` folder of the current analysis, and this will update the plots and graphs with new data included.
  ```
- 
+ ## Data Visualisation
+Use the remote desktop app and connect to R-shiny app server on the VM 'sarcov2.cam.uchc.edu' (use CAM credentials to login) and add the `VarDir-dateofAnalysis` folder of the current analysis, and this will update the plots and graphs with new data included.
  
  
 
