@@ -112,7 +112,7 @@ Kendra_ISG_TEST
         
  ```
  ## Data Visualisation
-Use the remote desktop app and connect to the R-shiny app server on the VM 'sarcov2.cam.uchc.edu' (use CAM credentials to login) and add the `VarDir-dateofAnalysis` folder of the current analysis, and this will update the plots and graphs with new data included.
+Use the remote desktop app and connect to the R-shiny app server on the VM `sarcov2.cam.uchc.edu` (use CAM credentials to login) and add the `VarDir-dateofAnalysis` folder of the current analysis, and this will update the plots and graphs with new data included.
  
  
 
